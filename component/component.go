@@ -11,9 +11,6 @@ package component
 type (
 	IComponent interface {
 		Name() string
-		IComponentLifecycle
-	}
-	IComponentLifecycle interface {
 		Init()
 		Stop()
 		SetParent(parent IComponent)
