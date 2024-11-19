@@ -8,6 +8,12 @@
 
 package codec
 
+var (
+	Json    = ICodec(new(jsonCodec))
+	MsgPack = ICodec(new(msgPackCodec))
+	PB      = ICodec(new(pbCodec))
+)
+
 type ICodec interface {
 	Decode(data []byte, msg interface{}) error
 	Encode(msg interface{}) ([]byte, error)

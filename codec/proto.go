@@ -12,10 +12,10 @@ import (
 	"google.golang.org/protobuf/proto"
 )
 
-type PBCodec struct {
+type pbCodec struct {
 }
 
-func (p *PBCodec) Decode(data []byte, msg interface{}) error {
+func (p *pbCodec) Decode(data []byte, msg interface{}) error {
 	if msg == nil {
 		return ErrPBUnPack
 	}
@@ -30,7 +30,7 @@ func (p *PBCodec) Decode(data []byte, msg interface{}) error {
 	return nil
 }
 
-func (p *PBCodec) Encode(msg interface{}) ([]byte, error) {
+func (p *pbCodec) Encode(msg interface{}) ([]byte, error) {
 	if msg == nil {
 		return nil, ErrPBPack
 	}

@@ -12,10 +12,10 @@ import (
 	"encoding/json"
 )
 
-type JsonCodec struct {
+type jsonCodec struct {
 }
 
-func (p *JsonCodec) Decode(data []byte, msg interface{}) error {
+func (p *jsonCodec) Decode(data []byte, msg interface{}) error {
 	if data == nil || msg == nil {
 		return ErrJsonUnPack
 	}
@@ -26,7 +26,7 @@ func (p *JsonCodec) Decode(data []byte, msg interface{}) error {
 	return nil
 }
 
-func (p *JsonCodec) Encode(msg interface{}) ([]byte, error) {
+func (p *jsonCodec) Encode(msg interface{}) ([]byte, error) {
 	if msg == nil {
 		return nil, ErrJsonPack
 	}

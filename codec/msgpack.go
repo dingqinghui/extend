@@ -10,15 +10,15 @@ package codec
 
 import "github.com/vmihailenco/msgpack/v5"
 
-type MsgPackCodec struct {
+type msgPackCodec struct {
 }
 
-func (p *MsgPackCodec) Decode(data []byte, msg interface{}) error {
+func (p *msgPackCodec) Decode(data []byte, msg interface{}) error {
 	err := msgpack.Unmarshal(data, msg)
 	return err
 }
 
-func (p *MsgPackCodec) Encode(msg interface{}) ([]byte, error) {
+func (p *msgPackCodec) Encode(msg interface{}) ([]byte, error) {
 	data, err := msgpack.Marshal(msg)
 	return data, err
 }
