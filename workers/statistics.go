@@ -12,5 +12,5 @@ import (
 	"sync/atomic"
 )
 
-var Count atomic.Uint64
+var Count atomic.Int64
 var PanicCount atomic.Uint64
