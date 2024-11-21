@@ -7,6 +7,7 @@ require golang.org/x/exp v0.0.0-20241108190413-2d47ceb2692f
 require (
 	github.com/dingqinghui/zlog v0.0.0-20241114085758-38cfda542706 // indirect
 	github.com/panjf2000/ants/v2 v2.10.0 // indirect
+	github.com/valyala/fastjson v1.6.4 // indirect
 	github.com/vmihailenco/msgpack/v5 v5.4.1 // indirect
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
